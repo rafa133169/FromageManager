@@ -1,15 +1,18 @@
 import React from "react";
 import { BrowserRouter,Route,Routes } from "react-router-dom";
+import Login from "../Pages/Login"
 
-function Routes() {
+function Rutas() {
   return (
+    <>
     <BrowserRouter>
       <Routes>
-        <Route exact path="/" component={Home} />
+        <Route path="/" element={<Login/>} />
         
       </Routes>
     </BrowserRouter>
+    </>
   );
 }
 
-export default Routes;
+export default Rutas;
