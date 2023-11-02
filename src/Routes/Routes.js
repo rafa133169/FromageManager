@@ -1,19 +1,23 @@
 import React from "react";
-// import tailwindConfig from "../../tailwind.config";
-import { BrowserRouter,Route,Routes } from "react-router-dom";
+import { createBrowserRouter } from "react-router-dom";
 import Login from "../Pages/Login"
+import '../App.css';
+import '../../node_modules/bootstrap/dist/css/bootstrap.min.css';
+import Recetas from "../Pages/Recetas";
 
-function Rutas() {
-  return (
-    <>
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<Login/>} />
-        
-      </Routes>
-    </BrowserRouter>
-    </>
-  );
-}
 
-export default Rutas;
+export const rutas = createBrowserRouter([
+  {
+    path: "/",
+    element: <Login />,
+  },
+  {
+    path:"/recetas",
+    element:<Recetas/>
+  },
+  {
+    
+  }
+]);
+
+

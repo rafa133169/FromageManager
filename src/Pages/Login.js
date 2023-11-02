@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import cheeseLoginImage from '../img/cheeseLogin.png';
 
 export default function Login() {
-    console.log("HOLAAAAA")
   return (
     <div className="grid grid-cols-1 sm:grid-cols-2 h-screen w-full">
 
@@ -35,7 +34,7 @@ export default function Login() {
             ></input>
           </div>
           <div className="mb-6 text-center">
-            <Link to="/home">
+            <Link to="/recetas">
               <button className="rounded-lg p-3 bg-[#9159D8]">Ingresar</button>
             </Link>
           </div>
