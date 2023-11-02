@@ -1,12 +1,12 @@
 import React from 'react'
-import { Navbar } from 'react-bootstrap'
+import AppNavbar from './Navbar'
 import Dashboard from './Dashboard'
 
 function Recetas() {
   return (
     <>
     <div >
-    <Navbar />
+    <AppNavbar />
     </div>
     <Dashboard/>
    
