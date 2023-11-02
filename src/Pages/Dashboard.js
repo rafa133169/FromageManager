@@ -10,6 +10,7 @@ function Dashboard() {
   };
 
   return (
+    
     <div className={`menu-dashboard ${menuOpen ? 'open' : ''}`}>
       <div className="top-menu">
         <div className="logo">

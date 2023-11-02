@@ -16,7 +16,9 @@ const AppNavbar = () => {
           <FontAwesomeIcon icon={faCog} />
         </Nav.Link>
       </Nav>
+      
     </Navbar>
+    
   );
 };
 
