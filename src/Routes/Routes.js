@@ -4,7 +4,7 @@ import Login from "../Pages/Login"
 import '../App.css';
 import '../../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import Recetas from "../Pages/Recetas";
-import Inventario from "../Pages/Inventario";
+import Inventario from "../Pages/inventario"
 
 export const rutas = createBrowserRouter([
   {
