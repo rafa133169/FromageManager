@@ -1,3 +1,4 @@
+import { Link, Outlet} from "react-router-dom";
 import React, { useState } from 'react';
 import 'boxicons/css/boxicons.min.css';
 
@@ -10,7 +11,7 @@ function Dashboard() {
   };
 
   return (
-    
+    <>
     <div className={`menu-dashboard ${menuOpen ? 'open' : ''}`}>
       <div className="top-menu">
         <div className="logo">
@@ -27,12 +28,15 @@ function Dashboard() {
       </div>
       <div className="menu">
         <div className="enlace">
+        <Link  to={"/recetas"}>
           <i className="bx bx-food-menu"></i>
-          <span>Recetas</span>
+          <span>Recetas</span></Link>
+          
         </div>
         <div className="enlace">
+        <Link  to={"/inventario"}>
           <i className="bx bx-basket"></i>
-          <span>Inventario de productos</span>
+          <span>Inventario de productos</span></Link>
         </div>
         <div className="enlace">
           <i className="bx bx-package"></i>
@@ -44,6 +48,8 @@ function Dashboard() {
         </div>
       </div>
     </div>
+    <Outlet/>
+    </>
   );
 }
 
