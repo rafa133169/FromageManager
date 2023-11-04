@@ -1,8 +1,8 @@
 import React from "react";
 import Dashboard from "./Dashboard";
-import FormInventario from "../Components/formInventario";
+import FormInventario from "../Components/FormInventario";
 // import Elemento from '../Components/Elemento'
-function inventario() {
+function Inventario() {
   return (
     <>
   <div className="flex">
@@ -20,4 +20,4 @@ function inventario() {
   );
 }
 
-export default inventario;
+export default Inventario;
