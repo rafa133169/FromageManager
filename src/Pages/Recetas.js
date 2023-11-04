@@ -1,6 +1,7 @@
 import React from 'react'
 import AppNavbar from './Navbar'
 import Dashboard from './Dashboard'
+import Footer from '../Components/Footer'
 
 function Recetas() {
   return (
@@ -10,8 +11,8 @@ function Recetas() {
     </div>
     <Dashboard/>
    
-    <div>
-      <image></image>
+    <div className=''>
+      <Footer/>
     </div>
     
     </>

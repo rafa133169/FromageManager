@@ -11,7 +11,7 @@ function Dashboard() {
 
   return (
     
-    <div className={`menu-dashboard ${menuOpen ? 'open' : ''}`}>
+    <div className={`menu-dashboard ${menuOpen ? 'open' : ''} rounded-xl`} >
       <div className="top-menu">
         <div className="logo">
           <img src="./src/logo.svg" alt="" />
