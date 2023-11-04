@@ -1,6 +1,6 @@
 import React from "react";
 import Dashboard from "./Dashboard";
-import FormInventario from "../Components/FormInventario";
+import FormInventario from "../Components/formInventario";
 // import Elemento from '../Components/Elemento'
 function Inventario() {
   return (
