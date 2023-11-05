@@ -1,7 +1,7 @@
 const connection = require("../database");
 
 const obtenerRecetas = (req, res) => {
-  connection.query("SELECT * FROM Recetas", (error, results) => {
+  connection.query('SELECT * FROM Recetas', (error, results) => {
     if (error) {
       console.error("Error al obtener las recetas", error);
       res.status(500).json({
