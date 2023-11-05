@@ -15,6 +15,7 @@ const obtenerMateriasPrimas = (req, res) => {
 
 const obtenerMateriaPrimaPorId = (req, res) => {
   const id = req.params.id_materiaPrima;
+
   connection.query("SELECT * FROM MateriaPrima WHERE id_materiaPrima = ?", [id], (error, results) => {
     if (error) {
       res.status(500).json({ error: "Ocurrió un error al obtener la materia prima" });

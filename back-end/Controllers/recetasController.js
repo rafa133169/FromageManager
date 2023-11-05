@@ -15,7 +15,7 @@ const obtenerRecetas = (req, res) => {
 
 const obtenerRecetaPorId = (req, res) => {
   const id = req.params.id_receta;
-  connection.query("SELECT * FROM Recetas WHERE id_receta = ?", [id], (error, results) => {
+  connection.query("SELECT * FROM Receta WHERE id_receta = ?", [id], (error, results) => {
     if (error) {
       res.status(500).json({ error: "Ocurrió un error al obtener la receta" });
     } else if (results.length === 0) {

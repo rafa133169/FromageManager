@@ -4,7 +4,7 @@ const cors = require("cors");
 
 const MateriaPrimaRouter = require("./Router/materiaPrimaRouter");
 const recetasRouter = require("./Router/recetasRouter")
-
+const usuariosRouter = require("./Router/usuariosRouter")
 
 
 /* app va a tener todos los atributos y metodos de 
@@ -19,6 +19,7 @@ app.use(express.json());
 // Ruta al Router
 app.use("/materiaPrima", MateriaPrimaRouter);
 app.use("/recetas", recetasRouter);
+app.use("/usuarios",usuariosRouter)
 
 
 app.get("/", (req, res) => {
