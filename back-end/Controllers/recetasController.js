@@ -29,7 +29,7 @@ const obtenerRecetaPorId = (req, res) => {
 const crearReceta = (req, res) => {
   const {
     queso,
-    id_materiaprima_id,
+    id_materiaPrima_id,
     tiempo_cuajado,
     tiempo_maduracion,
     cantidad_sal,
@@ -40,10 +40,10 @@ const crearReceta = (req, res) => {
   } = req.body;
 
   connection.query(
-    "INSERT INTO Recetas (queso, id_materiaprima_id, tiempo_cuajado, tiempo_maduracion, cantidad_sal, prensado, tiempo_total_elaboracion, valoracion_queso, imagen) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)",
+    "INSERT INTO Recetas (queso, id_materiaPrima_id, tiempo_cuajado, tiempo_maduracion, cantidad_sal, prensado, tiempo_total_elaboracion, valoracion_queso, imagen) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)",
     [
       queso,
-      id_materiaprima_id,
+      id_materiaPrima_id,
       tiempo_cuajado,
       tiempo_maduracion,
       cantidad_sal,
@@ -69,7 +69,7 @@ const actualizarRecetaPorId = (req, res) => {
   const id = req.params.id_receta;
   const {
     queso,
-    id_materiaprima_id,
+    id_materiaPrima_id,
     tiempo_cuajado,
     tiempo_maduracion,
     cantidad_sal,
@@ -80,10 +80,10 @@ const actualizarRecetaPorId = (req, res) => {
   } = req.body;
 
   connection.query(
-    "UPDATE Recetas SET queso = ?, id_materiaprima_id = ?, tiempo_cuajado = ?, tiempo_maduracion = ?, cantidad_sal = ?, prensado = ?, tiempo_total_elaboracion = ?, valoracion_queso = ?, imagen = ? WHERE id_receta = ?",
+    "UPDATE Recetas SET queso = ?, id_materiaPrima_id = ?, tiempo_cuajado = ?, tiempo_maduracion = ?, cantidad_sal = ?, prensado = ?, tiempo_total_elaboracion = ?, valoracion_queso = ?, imagen = ? WHERE id_receta = ?",
     [
       queso,
-      id_materiaprima_id,
+      id_materiaPrima_id,
       tiempo_cuajado,
       tiempo_maduracion,
       cantidad_sal,
