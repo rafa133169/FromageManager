@@ -7,6 +7,9 @@ import Recetas from "../Pages/Recetas";
 import NewReceta from "../Pages/NewReceta";
 import Container from "../Pages/Container";
 import Inventario from "../Pages/Inventario";
+import NewUsuario from "../Pages/NewUsuario";
+import NewIngrediente from "../Pages/NewIngrediente";
+
 
 export const rutas = createBrowserRouter([
   {
@@ -28,6 +31,14 @@ export const rutas = createBrowserRouter([
   {
     path: "/newreceta",
     element: <NewReceta/>
+  },
+  {
+    path: "/newusuario",
+    element: <NewUsuario/>
+  },
+  {
+    path: "/newingrediente",
+    element: <NewIngrediente/>
   }
 ]);
 

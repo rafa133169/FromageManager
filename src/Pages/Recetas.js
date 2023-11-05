@@ -1,23 +1,24 @@
-import React from 'react'
-import AppNavbar from './Navbar'
-import Dashboard from './Dashboard'
-import Footer from '../Components/Footer'
+import React, { useState } from "react";
+import Dashboard from "./Dashboard";
+import Modal from "../Components/Modal";
+import Card from "../Components/Card";
+import Contenedor from "../Components/Contenedor";
+import ContenedorRecetas from "../Components/Contenedor";
 
 function Recetas() {
+  
   return (
     <>
-    <div >
-    <AppNavbar />
-    </div>
-    <Dashboard/>
-   
-    <div className=''>
-      <Footer/>
-    </div>
-    
+      <div className="flex">
+        <div className="flex-1">
+          <Dashboard />
+        </div>
+        <div>
+          <ContenedorRecetas />
+        </div>
+      </div>
     </>
-    
-  )
+  );
 }
 
-export default Recetas
+export default Recetas;
