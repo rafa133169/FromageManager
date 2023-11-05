@@ -10,7 +10,7 @@ function Dashboard() {
   };
 
   return (
-    
+    <div className="bg-orange-100">
     <div className={`menu-dashboard ${menuOpen ? 'open' : ''}`}>
       <div className="top-menu">
         <div className="logo">
@@ -43,6 +43,7 @@ function Dashboard() {
           <span>Usuarios</span>
         </div>
       </div>
+    </div>
     </div>
   );
 }
