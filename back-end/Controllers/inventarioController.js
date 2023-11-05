@@ -8,7 +8,8 @@ const obtenerInventario = (req, res) => {
         error: "No se encontro el inventario",
       });
     } else {
-      res.json(results);
+      res.json({listaInventario:results});
+      
     }
   });
 };

@@ -1,5 +1,5 @@
 import React from "react";
-import Elemento from "./Elemento";
+import Elemento from "./ElementoInventario";
 const RectanguloInventario = () => {
   return (
     <>
@@ -11,24 +11,8 @@ const RectanguloInventario = () => {
           <div className="mt-5 mx-5">
             <Elemento title="Oaxaca"></Elemento>
           </div>
-          <div className="mt-5 mx-5">
-            <Elemento title="Panela"></Elemento>
-          </div>
-		  <div className="mt-5 mx-5">
-            <Elemento title="Cotija"></Elemento>
-          </div>
-		  <div className="mt-5 mx-5">
-            <Elemento title="Chihuahua"></Elemento>
-          </div>
-		  <div className="mt-5 mx-5">
-            <Elemento></Elemento>
-          </div>
-		  <div className="mt-5 mx-5">
-            <Elemento></Elemento>
-          </div>
-		  <div className="mt-5 mx-5">
-            <Elemento></Elemento>
-          </div>
+          
+		  
         </div>
       </div>
     </>
