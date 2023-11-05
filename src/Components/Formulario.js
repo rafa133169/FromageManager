@@ -21,18 +21,17 @@ function Formulario() {
             </div>
           </td>
           <td className="text-xl">
-            <div className="mb-4 mt-4">
+            <div className="sm:col-span-3">
               <label className="text-white ml-3" htmlFor="descrpcion">
                 Ingrediente:
               </label>
-              <input
-                id="ingrediente"
-                type="text"
-                className="mt-2 flow-root w-[90%] p-3 rounded-xl  "
-                placeholder="ingrediente"
-                name="ingrediente"
-                onChange={"ingrediente"}
-              />
+              <div className="mt-2">
+              <select id="country" name="country" autocomplete="country-name" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:max-w-xs sm:text-sm sm:leading-6">
+              <option>opcion 1</option>
+              <option>opcion 2</option>
+              <option>opcion 3</option>
+            </select>
+              </div>
             </div>
           </td>
         </tr>
