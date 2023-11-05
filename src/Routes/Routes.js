@@ -4,7 +4,9 @@ import Login from "../Pages/Login"
 import '../App.css';
 import '../../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import Recetas from "../Pages/Recetas";
-import AppNavbar from "../Pages/Navbar";
+import NewReceta from "../Pages/NewReceta";
+import Container from "../Pages/Container";
+import Inventario from "../Pages/Inventario";
 
 export const rutas = createBrowserRouter([
   {
@@ -15,10 +17,10 @@ export const rutas = createBrowserRouter([
     path:"/recetas",
     element:<Recetas/>
   },
-  {
-    path:"/prueba",
-    element:<Container/>,
-  },
+   {
+     path:"/prueba",
+     element:<Container/>,
+   },
   {
     path:"/inventario",
     element:<Inventario/>
