@@ -1,4 +1,5 @@
-import React from 'react';
+import React from "react";
+import { Link } from "react-router-dom";
 
 function Footer() {
   return (
@@ -9,19 +10,18 @@ function Footer() {
             <span>&copy; CONTACTOS</span>
             <ul className="flex flex-col space-y-2">
               <li>
-                <a href="#">+55 998 234 5678</a>
+                <Link to="#">+55 998 234 5678</Link>
               </li>
               <li>
-                <a href="#">+55 998 234 5678</a>
-              </li>
-              <li>
-                <a href="#">+55 998 234 5678</a>
+                <Link to="#">+55 998 234 5678</Link>
               </li>
             </ul>
           </p>
           <div className="flex">
             <p className="text-yellow-400">&copy; Copyright 2023</p>
-            <p className="ml-4 text-yellow-400">FromageManager S.A. de C.V. Todos los derechos reservados.</p>
+            <p className="ml-4 text-yellow-400">
+              FromageManager S.A. de C.V. Todos los derechos reservados.
+            </p>
           </div>
         </div>
       </div>

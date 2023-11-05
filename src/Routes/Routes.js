@@ -5,7 +5,6 @@ import '../App.css';
 import '../../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import Recetas from "../Pages/Recetas";
 import AppNavbar from "../Pages/Navbar";
-import Container from "../Pages/Container";
 
 export const rutas = createBrowserRouter([
   {
@@ -14,7 +13,6 @@ export const rutas = createBrowserRouter([
   },
   {
     path:"/recetas",
-    element:<AppNavbar/>,
     element:<Recetas/>
   },
   {
@@ -22,7 +20,12 @@ export const rutas = createBrowserRouter([
     element:<Container/>,
   },
   {
-    
+    path:"/inventario",
+    element:<Inventario/>
+  },
+  {
+    path: "/newreceta",
+    element: <NewReceta/>
   }
 ]);
 
