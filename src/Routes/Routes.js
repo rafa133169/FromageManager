@@ -9,6 +9,7 @@ import Container from "../Pages/Container";
 import Inventario from "../Pages/Inventario";
 import NewUsuario from "../Pages/NewUsuario";
 import NewIngrediente from "../Pages/NewIngrediente";
+import Usuarios from "../Pages/Usuarios";
 
 
 export const rutas = createBrowserRouter([
@@ -39,6 +40,10 @@ export const rutas = createBrowserRouter([
   {
     path: "/newingrediente",
     element: <NewIngrediente/>
+  },
+  {
+    path: "/usuarios",
+    element: <Usuarios/>
   }
 ]);
 

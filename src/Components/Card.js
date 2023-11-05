@@ -3,7 +3,7 @@ import React from "react";
 function Card() {
   return (
     <>
-      <div className="max-w-xs rounded overflow-hidden shadow-lg bg-white items-center ">
+      <div className="max-w-xs rounded overflow-hidden shadow-lg bg-white items-center m-5">
         <img
           className="w-2px h-48"
           src="https://s1.eestatic.com/2019/02/06/como/queso-como_hacer_374225412_114100912_1706x960.jpg"
