@@ -2,7 +2,7 @@ import './App.css';
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
-import Dashboard from './Pages/Dashboard';
+import Dashboard from './Pages/DashboardDetalleReceta';
 import AppNavbar from './Pages/Navbar';
 
 function App() {

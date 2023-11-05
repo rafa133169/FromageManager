@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import 'boxicons/css/boxicons.min.css';
+import DetalleRecta2 from './DetalleRecta2';
 
 
 function Dashboard() {
@@ -10,6 +11,7 @@ function Dashboard() {
   };
 
   return (
+    <div className='flex flex-row'>
     <div className="bg-orange-100">
     <div className={`menu-dashboard ${menuOpen ? 'open' : ''}`}>
       <div className="top-menu">
@@ -45,6 +47,13 @@ function Dashboard() {
       </div>
     </div>
     </div>
+
+    <div className='p-4 w-full mt-10'>
+    <DetalleRecta2></DetalleRecta2>
+    </div>
+
+    </div>
+    
   );
 }
 
