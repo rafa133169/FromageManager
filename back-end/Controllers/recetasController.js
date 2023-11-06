@@ -1,14 +1,14 @@
 const connection = require("../database");
 
 const obtenerRecetas = (req, res) => {
-  connection.query('SELECT * FROM Receta', (error, results) => {
+  connection.query('SELECT Receta.*, MateriaPrima.nombre_materia FROM Receta JOIN MateriaPrima ON MateriaPrima.id_materiaPrima = Receta.id_materiaPrima_id', (error, results) => {
     if (error) {
       console.error("Error al obtener las recetas", error);
       res.status(500).json({
         error: "Error al obtener las recetas",
       });
     } else {
-      res.json(results);
+      res.json({Resultado:results});
     }
   });
 };
