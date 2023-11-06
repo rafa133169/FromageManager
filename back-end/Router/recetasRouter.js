@@ -9,5 +9,6 @@ router.get("/:id_receta", recetasControllers.obtenerRecetaPorId);
 router.post("/", recetasControllers.crearReceta);
 router.delete("/:id_receta", recetasControllers.eliminarRecetaPorId);
 router.put("/:id_receta", recetasControllers.actualizarRecetaPorId);
+router.put("/queso",recetasControllers.obtenerRecetaPorNombre)
 
 module.exports = router;
