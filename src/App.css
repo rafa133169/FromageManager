@@ -210,3 +210,8 @@ body {
 .purple-bg {
   background-color: rgb(188, 18, 188);
 }
+
+.link-unstyled {
+  text-decoration: none;
+  color: inherit;
+}

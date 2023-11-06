@@ -1,11 +1,12 @@
 import React from "react";
 import Dashboard from "./Dashboard";
-import RectanguloInventario from "../Components/FormInventario";
+import RectanguloInventario from "../Components/formInventario";
 // import Elemento from '../Components/Elemento'
+
 function Inventario() {
   return (
     <>
-      <div className="flex h-screen bg-[#F5E39E]">
+      <div className="flex min-h-screen bg-[#F5E39E]">
         <div className="flex-1">
           <Dashboard></Dashboard>
         </div>

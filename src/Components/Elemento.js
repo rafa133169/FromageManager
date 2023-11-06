@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPlus, faMinus, faTrash } from '@fortawesome/free-solid-svg-icons';
 
-const RectanguloNaranja = ({title = "sopero"}) => {
+const RectanguloNaranja = ({ title = "sopero" }) => {
   const [contador, setContador] = useState(0);
 
   const aumentarContador = () => {
@@ -18,7 +18,7 @@ const RectanguloNaranja = ({title = "sopero"}) => {
   };
 
   return (
-    <div className="w-1000 h-200 bg-custom-orange rounded-lg flex items-center p-2">
+    <div className="w-1000 h-200 bg-custom-orange rounded-lg flex items-center p-2 mb-2">
       <div className="w-full flex items-center justify-between">
         <div className="flex items-center">
           <p className="text-white">Queso {title}</p>
@@ -31,8 +31,8 @@ const RectanguloNaranja = ({title = "sopero"}) => {
           <button className="w-12 h-12 bg-custom-orange text-white font-bold text-1xl flex items-center justify-center rounded-full border border-white" onClick={disminuirContador}>
             <FontAwesomeIcon icon={faMinus} />
           </button>
-          <button className="text-white border-white ml-4 " onClick={eliminarElemento}>
-            <FontAwesomeIcon icon={faTrash} className="fa-lg"/>
+          <button className="text-white border-white ml-4" onClick={eliminarElemento}>
+            <FontAwesomeIcon icon={faTrash} className="fa-lg" />
           </button>
         </div>
       </div>
