@@ -1,7 +1,7 @@
 const connection = require("../database");
+
 const obtenerRecetaPorNombre = (req, res) => {
     const queso = req.params.queso;
-    console.log(queso);
     connection.query(
       "SELECT * FROM Receta WHERE Receta.queso LIKE ?", [`%${queso}%`],(error, results) => {
         if (error) {

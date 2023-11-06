@@ -115,39 +115,13 @@ const eliminarRecetaPorId = (req, res) => {
   });
 };
 
-const obtenerRecetaPorNombre = (req, res) => {
-  const queso = req.params.queso;
-  console.log(queso);
-  connection.query(
-    "SELECT Receta.id_receta AS id_receta, Receta.queso AS queso FROM Receta WHERE Receta.queso LIKE ?", [`%${queso}%`],(error, results) => {
-      if (error) {
-        res.status(500).json({ error: "Ocurrió un error al obtener la receta" });
-      } else if (results.length === 0) {
-        res.status(404).json({ error: "La receta no fue encontrada" });
-      } else {
-        res.json(results[0]);
-      }
-    }
-  );
-};
 
-// const obtenerInventario = (req, res) => {
-//   connection.query("SELECT D.*, R.queso FROM DetallesQueso AS D JOIN Receta AS R ON D.id_receta_id = R.id_receta", (error, results) => {
-//     if (error) {
-//       console.error("Error al obtener los detalles del Queso para el inventario", error);
-//       res.status(500).json({
-//         error: "No se encontro el inventario",
-//       });
-//     } else {
-//       res.json({listaInventario:results});
-      
-//     }
-//   });}
+
+
 module.exports = {
   obtenerRecetas,
   obtenerRecetaPorId,
   crearReceta,
   actualizarRecetaPorId,
   eliminarRecetaPorId,
-  obtenerRecetaPorNombre,
 };
