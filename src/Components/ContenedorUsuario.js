@@ -1,8 +1,9 @@
-import React from 'react'
+import React from "react";
 import RectanguloNaranja from './Elemento'
 
 
 function ContenedorUsuario() {
+  
   return (
     <>
     <div className="w-1000 bg-[#FBFFE2] flex flex-col items-center rounded-xl mt-1000">
