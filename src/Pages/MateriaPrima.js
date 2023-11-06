@@ -1,8 +1,8 @@
 import React from "react";
 import Dashboard from "./Dashboard";
-import FormInventario from "../Components/formInventario";
-// import Elemento from '../Components/Elemento'
-function Inventario() {
+import FormMateria from "../Components/formMateriaprima";
+
+function MateriaPrima() {
   return (
     <>
       <div className="flex">
@@ -11,7 +11,7 @@ function Inventario() {
         </div>
         <div className="w-3/4 flex mt-10 mr-80">
           <div className="w-full">
-            <FormInventario title="Inventario"></FormInventario>
+            <FormMateria title="Materia prima"></FormMateria>
           </div>
         </div>
       </div>
@@ -19,4 +19,4 @@ function Inventario() {
   );
 }
 
-export default Inventario;
+export default MateriaPrima;

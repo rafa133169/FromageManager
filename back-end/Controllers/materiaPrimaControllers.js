@@ -1,5 +1,19 @@
 const connection = require("../database");
 
+const obtenerMateriasPrimasNombre = (req, res) => {
+  connection.query("SELECT id_materiaPrima, nombre_materia, cantidad FROM MateriaPrima", (error, results) => {
+    if (error) {
+      console.error("Error al obtener las materias primas", error);
+      res.status(500).json({
+        error: "Error al obtener las materias primas",
+      });
+    } else {
+      res.json(results);
+    }
+  });
+};
+
+
 const obtenerMateriasPrimas = (req, res) => {
   connection.query("SELECT * FROM MateriaPrima", (error, results) => {
     if (error) {
@@ -73,10 +87,46 @@ const eliminarMateriaPrimaPorId = (req, res) => {
   });
 };
 
+const aumentarCantidadMateriaPrima = (req, res) => {
+  const id = req.params.id_materiaPrima;
+  connection.query(
+    "UPDATE MateriaPrima SET cantidad = cantidad + 1 WHERE id_materiaPrima = ?",
+    [id],
+    (error, results) => {
+      if (error) {
+        console.error("Error al aumentar la cantidad de materia prima", error);
+        res.status(500).json({ error: "Error al aumentar la cantidad de materia prima" });
+      } else {
+        res.json({ message: "Cantidad de materia prima aumentada correctamente" });
+      }
+    }
+  );
+};
+
+
+const disminuirCantidadMateriaPrima = (req, res) => {
+  const id = req.params.id_materiaPrima;
+  connection.query(
+    "UPDATE MateriaPrima SET cantidad = cantidad - 1 WHERE id_materiaPrima = ?",
+    [id],
+    (error, results) => {
+      if (error) {
+        console.error("Error al disminuir la cantidad de materia prima", error);
+        res.status(500).json({ error: "Error al disminuir la cantidad de materia prima" });
+      } else {
+        res.json({ message: "Cantidad de materia prima disminuida correctamente" });
+      }
+    }
+  );
+};
+
 module.exports = {
+  obtenerMateriasPrimasNombre,
   obtenerMateriasPrimas,
   obtenerMateriaPrimaPorId,
   crearMateriaPrima,
   actualizarMateriaPrimaPorId,
   eliminarMateriaPrimaPorId,
+  aumentarCantidadMateriaPrima,
+  disminuirCantidadMateriaPrima,
 };
