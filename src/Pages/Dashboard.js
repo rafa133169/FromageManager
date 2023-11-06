@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import 'boxicons/css/boxicons.min.css';
-
+import { Link } from "react-router-dom";
 
 function Dashboard() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -10,7 +10,7 @@ function Dashboard() {
   };
 
   return (
-    
+
     <div className={`menu-dashboard ${menuOpen ? 'open' : ''} rounded-xl`} >
       <div className="top-menu">
         <div className="logo">
@@ -26,22 +26,35 @@ function Dashboard() {
         <input type="text" className="input" placeholder="Buscar" />
       </div>
       <div className="menu">
-        <div className="enlace">
-          <i className="bx bx-food-menu"></i>
-          <span>Recetas</span>
-        </div>
-        <div className="enlace">
-          <i className="bx bx-basket"></i>
-          <span>Inventario de productos</span>
-        </div>
+
+
+        <Link to="/recetas" className='link-unstyled'>
+          <div className="enlace">
+            <i className="bx bx-food-menu"></i>
+            <span>Recetas</span>
+          </div>
+        </Link>
+
+        <Link to="/Inventario" className='link-unstyled'>
+          <div className="enlace">
+            <i className="bx bx-basket"></i>
+            <span>Inventario de productos</span>
+          </div>
+        </Link>
+
+
         <div className="enlace">
           <i className="bx bx-package"></i>
           <span>Materia prima</span>
         </div>
-        <div className="enlace">
-          <i className="bx bx-user"></i>
-          <span>Usuarios</span>
-        </div>
+
+        <Link to="/Usuarios" className='link-unstyled'>
+          <div className="enlace">
+            <i className="bx bx-user"></i>
+            <span>Usuarios</span>
+          </div>
+        </Link>
+
       </div>
     </div>
   );
