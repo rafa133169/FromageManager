@@ -7,6 +7,7 @@ const recetasRouter = require("./Router/recetasRouter")
 const usuariosRouter = require("./Router/usuariosRouter")
 const inventarioRouter = require("./Router/inventarioRouter")
 const busquedaRouter = require ("./Router/buscadoresRouter")
+const tipoUsuarioRouter = require("./Router/tipoUsuarioRouter")
 
 
 /* app va a tener todos los atributos y metodos de 
@@ -24,6 +25,7 @@ app.use("/recetas", recetasRouter);
 app.use("/usuarios",usuariosRouter);
 app.use("/inventario",inventarioRouter);
 app.use("/buscar",busquedaRouter);
+app.use("/tipoUsuario",tipoUsuarioRouter)
 
 
 app.get("/", (req, res) => {

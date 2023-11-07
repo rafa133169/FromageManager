@@ -1,14 +1,14 @@
 const connection = require("../database");
 
 const obtenerUsuarios = (req, res) => {
-  connection.query("SELECT * FROM Usuarios", (error, results) => {
+  connection.query("SELECT Usuarios.*,TipoUsuarios.tipo_usuario FROM Usuarios JOIN TipoUsuarios ON Usuarios.id_tipo_usuario_id = TipoUsuarios.id_tipo_usuario", (error, results) => {
     if (error) {
       console.error("Error al obtener Usuarios", error);
       res.status(500).json({
         error: "No se encontraron los usuarios",
       });
     } else {
-      res.json(results);
+      res.json({listaUsuarios:results});
     }
   });
 };
