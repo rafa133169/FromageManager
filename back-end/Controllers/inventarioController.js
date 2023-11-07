@@ -1,7 +1,8 @@
 const connection = require("../database");
 
 const obtenerInventario = (req, res) => {
-  connection.query("SELECT D.*, R.queso FROM DetallesQueso AS D JOIN Receta AS R ON D.id_receta_id = R.id_receta", (error, results) => {
+  connection.query("SELECT * FROM Receta", (error, results) => {
+    // "SELECT D.*, R.* FROM DetallesQueso AS D JOIN Receta AS R ON D.id_receta_id = R.id_receta"
     if (error) {
       console.error("Error al obtener los detalles del Queso para el inventario", error);
       res.status(500).json({
