@@ -4,6 +4,7 @@ import ContenedorRecetas from "../Components/Contenedor";
 import { Link } from "react-router-dom";
 
 function Recetas() {
+  
   return (
     <>
       <div className="flex min-h-screen bg-[#F5E39E]">

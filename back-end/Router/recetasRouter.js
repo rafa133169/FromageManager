@@ -11,4 +11,5 @@ router.post("/", recetasControllers.crearReceta);
 router.delete("/:id_receta", recetasControllers.eliminarRecetaPorId);
 router.put("/:id_receta", recetasControllers.actualizarRecetaPorId);
 
+
 module.exports = router;

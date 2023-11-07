@@ -63,7 +63,7 @@ const RectanguloNaranja = ({ title = "sopero" }) => {
           
         </div>
         <br/>
-        </>
+        </> 
       ))}
     </>
   );

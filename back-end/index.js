@@ -6,6 +6,7 @@ const MateriaPrimaRouter = require("./Router/materiaPrimaRouter");
 const recetasRouter = require("./Router/recetasRouter")
 const usuariosRouter = require("./Router/usuariosRouter")
 const inventarioRouter = require("./Router/inventarioRouter")
+const busquedaRouter = require ("./Router/buscadoresRouter")
 
 
 /* app va a tener todos los atributos y metodos de 
@@ -22,6 +23,7 @@ app.use("/materiaPrima", MateriaPrimaRouter);
 app.use("/recetas", recetasRouter);
 app.use("/usuarios",usuariosRouter);
 app.use("/inventario",inventarioRouter);
+app.use("/buscar",busquedaRouter);
 
 
 app.get("/", (req, res) => {
