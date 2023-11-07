@@ -3,6 +3,7 @@ import Dashboard from "./Dashboard";
 import ContenedorRecetas from "../Components/Contenedor";
 
 function Recetas() {
+  
   return (
     <>
       <div className="flex min-h-screen bg-[#F5E39E]">

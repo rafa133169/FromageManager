@@ -25,8 +25,12 @@ function Card() {
       <div className="card-body">
         <div className="font-bold text-lg mb-2">{laReceta.queso}</div>
         <p className="text-gray-700 text-sm">
-          Contenido de la tarjeta. Puedes agregar una descripción o detalles
-          aquí.
+          {`Tiempo de cuajado: ${laReceta.tiempo_cuajado} minutos`}<br/>
+          {`Tiempo de maduracion: ${laReceta.tiempo_cuajado} minutos`}<br/>
+          {`Cantidad de sal: ${laReceta.cantidad_sal} Gramos`}<br/>
+          {`Prensado: ${laReceta.prensado} Veces`}<br/>
+          {`Tiempo Total de elaboracion: ${laReceta.tiempo_total_elaboracion} minutos`}<br/>
+          {`Valoracion: ${laReceta.valoracion_queso}/10`}<br/>
         </p>
       </div>
       <div className="px-4 py-2">
