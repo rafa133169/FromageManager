@@ -10,6 +10,7 @@ import Inventario from "../Pages/Inventario";
 import NewUsuario from "../Pages/NewUsuario";
 import NewIngrediente from "../Pages/NewIngrediente";
 import Usuarios from "../Pages/Usuarios";
+import Quesos from "../Pages/Quesos";
 
 
 export const rutas = createBrowserRouter([
@@ -44,6 +45,10 @@ export const rutas = createBrowserRouter([
   {
     path: "/usuarios",
     element: <Usuarios/>
+  },
+  {
+    path: "/quesos",
+    element: <Quesos/>
   }
 ]);
 

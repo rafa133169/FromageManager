@@ -35,7 +35,7 @@ export default function Login() {
           </div>
           <div className="mb-6 text-center">
             <Link to="/recetas" className="link-unstyled">
-              <button className="rounded-lg p-3 bg-[#9159D8]">Ingresar</button>
+              <button className="rounded-lg p-3 text-white bg-[#9159D8]">Ingresar</button>
             </Link>
           </div>
         </form>

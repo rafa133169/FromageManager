@@ -25,6 +25,18 @@ const obtenerRecetaPorId = (req, res) => {
     }
   });
 };
+const obtenerRecetaPorQueso = (req, res) => {
+  const queso = req.params.queso;
+  connection.query("SELECT ricoline2_cheese.id_receta AS id_receta, ricoline2_cheese.queso AS queso FROM Receta WHERE ricoline2_cheese.queso LIKE ?;", [`%${queso}%`], (error, results) => {
+    if (error) {
+      res.status(500).json({ error: "Ocurrió un error al obtener la receta" });
+    } else if (results.length === 0) {
+      res.status(404).json({ error: "La receta no fue encontrada" });
+    } else {
+      res.json(results[0]);
+    }
+  });
+};
 
 const crearReceta = (req, res) => {
   const {
@@ -118,6 +130,7 @@ const eliminarRecetaPorId = (req, res) => {
 module.exports = {
   obtenerRecetas,
   obtenerRecetaPorId,
+  obtenerRecetaPorQueso,
   crearReceta,
   actualizarRecetaPorId,
   eliminarRecetaPorId,

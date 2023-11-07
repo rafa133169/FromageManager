@@ -26,8 +26,6 @@ function Dashboard() {
         <input type="text" className="input" placeholder="Buscar" />
       </div>
       <div className="menu">
-
-
         <Link to="/recetas" className='link-unstyled'>
           <div className="enlace">
             <i className="bx bx-food-menu"></i>
@@ -35,20 +33,21 @@ function Dashboard() {
           </div>
         </Link>
 
-        <Link to="/Inventario" className='link-unstyled'>
+        <Link to="/quesos" className='link-unstyled'>
           <div className="enlace">
             <i className="bx bx-basket"></i>
-            <span>Inventario de productos</span>
+            <span>Inventario de los quesos</span>
           </div>
         </Link>
 
-
-        <div className="enlace">
+        <Link to="/inventario">
+          <div className="enlace">
           <i className="bx bx-package"></i>
           <span>Materia prima</span>
         </div>
+        </Link>
 
-        <Link to="/Usuarios" className='link-unstyled'>
+        <Link to="/usuarios" className='link-unstyled'>
           <div className="enlace">
             <i className="bx bx-user"></i>
             <span>Usuarios</span>

@@ -6,6 +6,7 @@ const router = express.Router();
 // Rutas para la tabla Recetas
 router.get("/", recetasControllers.obtenerRecetas);
 router.get("/:id_receta", recetasControllers.obtenerRecetaPorId);
+router.get("/:queso", recetasControllers.obtenerRecetaPorQueso);
 router.post("/", recetasControllers.crearReceta);
 router.delete("/:id_receta", recetasControllers.eliminarRecetaPorId);
 router.put("/:id_receta", recetasControllers.actualizarRecetaPorId);
